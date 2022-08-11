@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 172.16.249.10:1998
+        file-extension: yaml
+        namespace:
+      server-addr: 172.16.249.10:1998
+# data-id
+# ${spring.application.name}-${spring.profile.active}.${file-extension}
