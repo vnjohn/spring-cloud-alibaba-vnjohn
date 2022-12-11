@@ -1,0 +1,37 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: alibaba-sentinel-8401
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      datasource:
+        nacos:
+          nacos:
+            serverAddr: localhost:8848
+            groupId: DEFAULT_GROUP
+            dataId: flow-limit-sentinel.json
+            ruleType: flow
+      transport:
+        # 配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        # 默认 8719 端口，若被占用会自动从 8719+1，直到找到未被占用的端口
+        port: 8719
+      web-context-unify: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# 消费者将要去访问的微服务名称(注册成功进 Nacos 微服务提供者)
+service-url:
+  nacos-user-service: http://alibaba-provider
+feign:
+  sentinel:
+    enabled: true
+#  nacos-user-service: http://alibaba-provider

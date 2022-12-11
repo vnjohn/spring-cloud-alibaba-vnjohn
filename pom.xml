@@ -16,7 +16,8 @@
     <description>spring-cloud-alibaba-vnjohn</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud-alibaba-version>2.2.5.RELEASE</spring-cloud-alibaba-version>
+        <spring-cloud-alibaba-version>2.2.8.RELEASE</spring-cloud-alibaba-version>
+        <spring-cloud-gateway-version>Hoxton.SR5</spring-cloud-gateway-version>
     </properties>
     <dependencies>
 
@@ -25,12 +26,28 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--服务调用-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>2.2.7.RELEASE</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -48,6 +65,9 @@
         <module>alibaba-9002</module>
         <module>alibaba-consumer-8803</module>
         <module>alibaba-config-3377</module>
+        <module>alibaba-sentinel-8401</module>
+        <module>alibaba-commons</module>
+        <module>alibaba-openfeign-consumer-8888</module>
     </modules>
 
 </project>

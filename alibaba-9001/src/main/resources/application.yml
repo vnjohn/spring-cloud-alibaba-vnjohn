@@ -5,6 +5,8 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        # ephemeral=true 采用的是 distro 协议-临时实例，ephemeral=false 采用是 raft 协议-持久实例
+#        ephemeral: false
   application:
     name: alibaba-provider
 
