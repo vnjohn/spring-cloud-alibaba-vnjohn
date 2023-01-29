@@ -6,7 +6,6 @@
         <groupId>com.vnjohn</groupId>
         <artifactId>spring-cloud-alibaba-vnjohn</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>alibaba-sentinel-8401</artifactId>
     <version>0.0.1-SNAPSHOT</version>

@@ -35,3 +35,7 @@ feign:
   sentinel:
     enabled: true
 #  nacos-user-service: http://alibaba-provider
+
+resttemplate:
+  sentinel:
+    enabled: true

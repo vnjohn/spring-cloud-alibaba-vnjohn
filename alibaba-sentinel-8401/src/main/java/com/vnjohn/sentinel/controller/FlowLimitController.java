@@ -24,7 +24,8 @@ public class FlowLimitController {
 
     @GetMapping("/linkA")
     public String linkA() {
-        return commonService.common();
+//        return commonService.common();
+        return "linkA";
     }
 
     @GetMapping("/linkB")
